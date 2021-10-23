@@ -1,0 +1,8 @@
+<div>
+  <h1 id="foo">This should be removed</h1>
+  <button data-reflex="click->Example#change">Click me to change that h1 (works)</button>
+  <%# This fails because of the attempt to remove a nonexistant element on line 41 of example_reflex.rb%>
+  <button data-reflex="click->Example#remove">Click me to delete that h1 (doesnt)</button>
+  <%# This shorthand is broken, requires prepending with 'click->' in order to work %>
+  <button data-reflex="Example#remove">Click me to delete that h1 (doesnt work for different reason)</button>
+</div>
